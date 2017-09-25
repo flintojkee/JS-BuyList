@@ -1,14 +1,67 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="uk">
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>Buy List</title>
+    <link rel="stylesheet" href="main.css" charset="utf-8">
 </head>
+
 <body>
-<h1>Hello World</h1>
-<p>Hello Git</p>
+
+<div class="container">
+
+    <div class="control-panel div-shadow">
+        <form action="">
+            <input type="text" placeholder="Назва товару">
+            <input type="submit" class="none-style-active" value="Додати" >
+        </form>
+        <div class="product">
+            <input placeholder="Нова назва" value="Помідори" disabled>
+            <div class="controller">
+                <button class="circle-btn btn-decrement inactive btn-sign">-</button>
+                <span class="count-label">1</span>
+                <button class="circle-btn btn-increment btn-sign">+</button>
+                <button type="button" class="delete btn-sign">x</button>
+                <button type="button" class="acquired btn-sign">Куплено</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <input placeholder="Нова назва" value="Печиво" disabled>
+            <div class="controller">
+                <button class="circle-btn btn-decrement inactive btn-sign">-</button>
+                <span class="count-label">1</span>
+                <button class="circle-btn btn-increment btn-sign">+</button>
+                <button type="button" class="delete btn-sign">x</button>
+                <button type="button" class="acquired btn-sign">Куплено</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <input placeholder="Нова назва" value="Сир" disabled>
+            <div class="controller">
+                <button class="circle-btn btn-decrement inactive btn-sign">-</button>
+                <span class="count-label">1</span>
+                <button class="circle-btn btn-increment btn-sign">+</button>
+                <button type="button" class="delete btn-sign">x</button>
+                <button type="button" class="acquired btn-sign">Куплено</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner div-shadow">
+        <div class="left ">Залишилось</div>
+        <div class="left-res">
+            <div class="label">Помідори <div class="quantity">1</div></div>
+            <div class="label">Печиво <div class="quantity">1</div></div>
+            <div class="label">Сир <div class="quantity">1</div></div>
+        </div>
+
+        <div class="bought">Куплено</div>
+</div>
+</div>
+
 </body>
+
 </html>

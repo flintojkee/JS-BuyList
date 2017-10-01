@@ -71,7 +71,6 @@ form input[type="submit"] {
     padding-top: 6px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-    position: relative;
 }
 
 form input[type="submit"]:hover {
@@ -79,7 +78,19 @@ form input[type="submit"]:hover {
     border-bottom-color: #1668b7;
     cursor: pointer;
 }
-
+.controller-left{
+    padding: 10px;
+    width: 38%;
+    float: left;
+}
+.controller-center{
+    width: 30%;
+    float: left;
+}
+.controller-right{
+    width: 30%;
+    float: left;
+}
 .stats{
     min-height: 165px;
     width: 20%;
@@ -124,22 +135,6 @@ form input[type="submit"]:hover {
     border-top: 1px solid rgba(34,36,38,.15);
 }
 
-.product input {
-    margin-top: 4px;
-    padding: 5px;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    float: left;
-}
-
-.product input:focus {
-    font-size: 10px;
-    box-shadow: 0 0 5px #51CBEE;
-    border: 1px solid #51CBEE;
-    border-radius: 3px;
-    margin-right: 146px;
-}
 .circle-btn {
     width: 31px;
     height: 33px;
@@ -152,12 +147,10 @@ form input[type="submit"]:hover {
 .circle-btn:hover {
     cursor: pointer;
 }
-
 .btn-decrement {
     background-color: #BF2728;
     border-bottom: 3px solid #BF2728;
 }
-
 .btn-decrement:hover {
     background-color: #BF2728;
     border-bottom-color: #BF2728;

@@ -7,11 +7,12 @@ $(function () {
         var quanity_label = $node.find(".count-label")
         quanity_label.text(quanity);
         $node.find(".controller-left").text(title);
-        $list.append($node);
+        $list.append($node).stop().hide().slideDown();
     }
     $("form input[type=button]").click(
         function(){
-            addItem("lld");
+            var name = $("form input[placeholder='Назва товару']");
+            addItem(document.getElementById("newItem").value);
         }
     );
 });

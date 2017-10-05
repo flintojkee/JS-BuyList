@@ -55,10 +55,10 @@ form input[type="text"]:focus {
 }
 
 form input[type="text"]:focus::-webkit-input-placeholder {
-    color: black;
+    color: grey;
 }
 
-form input[type="submit"] {
+form input[type="button"] {
     margin-left: -3px;
     height: 40px;
     width:110px;
@@ -73,14 +73,18 @@ form input[type="submit"] {
     border-bottom-right-radius: 3px;
 }
 
-form input[type="submit"]:hover {
+form input[type="button"]:hover {
     background-color: #2176B7;
     border-bottom-color: #1668b7;
     cursor: pointer;
 }
+.Item{
+    width: 100%;
+    float: left;
+}
 .controller-left{
     padding: 10px;
-    width: 38%;
+    width: 37%;
     float: left;
 }
 .controller-center{
@@ -147,30 +151,30 @@ form input[type="submit"]:hover {
 .circle-btn:hover {
     cursor: pointer;
 }
-.btn-decrement {
+.btn-minus {
     background-color: #BF2728;
     border-bottom: 3px solid #BF2728;
 }
-.btn-decrement:hover {
+.btn-minus:hover {
     background-color: #BF2728;
     border-bottom-color: #BF2728;
 }
 
-.btn-decrement.inactive {
+.btn-minus.inactive {
     border: none;
     opacity: 0.5;
 }
 
-.btn-decrement.inactive:hover {
+.btn-minus.inactive:hover {
     background-color: #D01919;
 }
 
-.btn-increment {
+.btn-plus {
     background-color: #21BA45;
     border-bottom: 3px solid #21A341;
 }
 
-.btn-increment:hover {
+.btn-plus:hover {
     background-color: #0EA432;
     border-bottom-color: #119131;
 }
@@ -241,14 +245,6 @@ form input[type="submit"]:hover {
     text-decoration: line-through;
 }
 
-.display-none {
-    display: none;
-}
-
-.centered {
-    margin-left: 39px;
-}
-
 .label {
     display: inline-block;
     height: 30px;
@@ -272,4 +268,24 @@ form input[type="submit"]:hover {
     padding: 3px;
     margin-top: -4px;
     margin-left: 4px;
+}
+.badge{
+    padding-left: 10px;
+    width: 150px;
+    height: 100px;
+    background-color: purple;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: fixed;
+    bottom: -50px;
+    left: 30px;
+    transition:1s all ease;
+}
+.badge:hover{
+    background-color: royalblue;
+    bottom: 0;
+}
+.one-row-template{
+    display: none;
 }

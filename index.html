@@ -8,47 +8,45 @@
 </head>
 
 <body>
-
 <div class="container">
-    <div class="control-panel div-shadow">
-        <form action="">
-            <input id = "newItem" class="prod-title" type="text" placeholder="Назва товару">
-            <input type='button' value="Додати" >
-        </form>
-        <div class = "product-list"></div>
-    </div>
-
-    <div class="stats div-shadow">
-        <div class="remains ">Залишилось</div>
-        <div class="remains-products">
-            <div class="label">Помідори <div class="quantity">1</div></div>
-            <div class="label">Печиво <div class="quantity">1</div></div>
-            <div class="label">Сир <div class="quantity">1</div></div>
+    <div class="main-and-sidebar">
+        <div class="main div-shadow">
+            <div class = "input-div">
+                <input id = "newItem" class="prod-title" type="text" placeholder="Назва товару">
+                <button class="add-button" >Додати</button>
+            </div>
+            <div class = "product-list"></div>
         </div>
-        <div class="bought">Куплено</div>
-        <div class="stats-panel"></div>
-</div>
-
-    <div class="badge">
-        <p>JSBuyList</p>
-        <p>Created by Denys Vasylenko</p>
+        <div class="sidebar div-shadow">
+                <div class="remains ">Залишилось</div>
+                <div class="remains-products">
+                    <div class="label">Помідори <div class="quantity">1</div></div>
+                    <div class="label">Печиво <div class="quantity">1</div></div>
+                    <div class="label">Сир <div class="quantity">1</div></div>
+                </div>
+                <div class="bought">Куплено</div>
+                <div class="stats-panel"></div>
+        </div>
     </div>
 </div>
-
-<div class="one-row-template">
-    <div class="Item">
-    <div class="controller-left">
-        Печиво
-    </div>
-    <div class="controller-center">
-        <button class="circle-btn btn-minus inactive btn-sign">-</button>
-        <span class="count-label">1</span>
-        <button class="circle-btn btn-plus btn-sign">+</button>
-    </div>
-    <div class="controller-right">
-        <button type="button" class="delete btn-sign">x</button>
-        <button type="button" class="acquired btn-sign">Куплено</button>
-    </div>
+<div class="badge">
+    <p>BuyList</p>
+    <p>Created by Denys Vasylenko</p>
+</div>
+<div class="one-item-template">
+    <div class="item">
+        <div class="controller-left">
+            Печиво
+        </div>
+        <div class="controller-center">
+            <button class="circle-btn btn-minus inactive btn-sign">-</button>
+            <span class="count-label">1</span>
+            <button class="circle-btn btn-plus btn-sign">+</button>
+        </div>
+        <div class="controller-right">
+            <button type="button" class="delete btn-sign">x</button>
+            <button type="button" class="acquired btn-sign">Куплено</button>
+        </div>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

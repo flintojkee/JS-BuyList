@@ -33,6 +33,7 @@ body {
     margin-right: 40px;
     background-color: white;
     flex: 2;
+    height: 10%;
 }
 /* Sidebar */
 
@@ -41,11 +42,12 @@ body {
     background-color: white;
     font-weight: bolder;
     flex: 1;
+    height: 30%;
 }
 /* Buttons */
 .circle-btn {
-    width: 31px;
-    height: 33px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     float: left;
     margin: 0 4px 0 4px;
@@ -56,21 +58,21 @@ body {
     cursor: pointer;
 }
 .btn-minus {
-    background-color: #BF2728;
-    border-bottom: 3px solid #BF2728;
+    background-color: #c72728;
+    border-bottom: 3px solid #4b1111;
 }
 .btn-minus:hover {
-    background-color: #BF2728;
-    border-bottom-color: #BF2728;
+    background-color: #681818;
+    border-bottom-color: #320c0c;
 }
 
 .btn-minus.inactive {
-    border: none;
+    border-bottom: 3px solid #4b1111;
     opacity: 0.5;
 }
 
 .btn-minus.inactive:hover {
-    background-color: #D01919;
+    background-color: #c72728;
 }
 
 .btn-plus {
@@ -90,12 +92,21 @@ body {
 }
 
 /* Stats */
+.one-item-stat-template{
+    display: none;
+}
 .remains-products{
     min-height: 30px;
     padding: 14px;
     box-sizing: content-box;
     border: none;
     border-top: 1px solid rgba(34,36,38,.15);
+}
+.bought-products{
+    min-height: 30px;
+    padding: 14px;
+    box-sizing: content-box;
+    border: none;
 }
 .remains, .bought {
     height: 55px;
@@ -150,7 +161,7 @@ body {
     float: right;
     margin-left: 7px;
     width: 33px;
-    height: 32px;
+    height: 33px;
     padding: 5px;
     background-color: #db2828;
     border-radius: 4px;
@@ -164,12 +175,11 @@ body {
     border-bottom-color: #b61a1b;
 }
 
-.acquired-btn-display {
-    display: none;
-}
-
 .acquired-text-style {
     text-decoration: line-through;
+}
+.acquired-count {
+    margin-left: 4px;
 }
 
 .label {
@@ -182,6 +192,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 5px;
+    margin-right: 5px;
 }
 
 .quantity {
@@ -251,6 +262,7 @@ input[type="text"]:focus::-webkit-input-placeholder {
     display: none;
 }
 .item{
+    display: none;
     width: 100%;
     float: left;
     padding: 8px 5px;
@@ -273,15 +285,16 @@ input[type="text"]:focus::-webkit-input-placeholder {
 /* Badge */
 .badge{
     padding-left: 10px;
-    width: 150px;
-    height: 100px;
+    width: 160px;
+    height: 130px;
     background-color: purple;
     color: white;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     position: fixed;
-    bottom: -50px;
+    bottom: -70px;
     left: 30px;
+    font-size: 20px;
     transition:1s all ease;
 }
 .badge:hover{

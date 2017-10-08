@@ -19,13 +19,9 @@
         </div>
         <div class="sidebar div-shadow">
                 <div class="remains ">Залишилось</div>
-                <div class="remains-products">
-                    <div class="label">Помідори <div class="quantity">1</div></div>
-                    <div class="label">Печиво <div class="quantity">1</div></div>
-                    <div class="label">Сир <div class="quantity">1</div></div>
-                </div>
+                <div class="remains-products"></div>
                 <div class="bought">Куплено</div>
-                <div class="stats-panel"></div>
+                <div class="bought-products"></div>
         </div>
     </div>
 </div>
@@ -34,14 +30,14 @@
     <p>Created by Denys Vasylenko</p>
 </div>
 <div class="one-item-template">
-    <div class="item">
+    <div class="item" >
         <div class="controller-left">
             Печиво
         </div>
         <div class="controller-center">
-            <button class="circle-btn btn-minus inactive btn-sign">-</button>
+            <button class="btn-minus circle-btn inactive btn-sign">-</button>
             <span class="count-label">1</span>
-            <button class="circle-btn btn-plus btn-sign">+</button>
+            <button class="btn-plus circle-btn  btn-sign">+</button>
         </div>
         <div class="controller-right">
             <button type="button" class="delete btn-sign">x</button>
@@ -49,6 +45,7 @@
         </div>
     </div>
 </div>
+<div class="one-item-stat-template"><div style="display: none" class="label"><span class="name">Помідори</span> <div class="quantity">1</div></div></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="main.js"></script>
 </body>

@@ -2,6 +2,7 @@ $(function () {
     var $list = $(".product-list");
     var $stats = $(".remains-products");
     var $bought =$(".bought-products");
+    var $remains = $(".remains-products");
     var ONE_ROW_ITEM = $(".one-item-template").html();
     var ONE_ROW_STAT = $(".one-item-stat-template").html();
     function addItem(title) {
@@ -19,7 +20,7 @@ $(function () {
         $item.find(".btn-plus").click(function () {
             quantity+=1;
             $item.find(".btn-minus").prop("disabled",false);
-            $item.find(".btn-minus").removeClass("inactive")
+            $item.find(".btn-minus").removeClass("inactive");
             $count_label.text(quantity);
             $quantity_label.text(quantity);
         });
@@ -37,39 +38,39 @@ $(function () {
             }
         );
         $item.find(".acquired").click(function () {
-            var id = $item.find(".acquired");
-            if(id == "acquired") {
                 $item.find(".btn-minus").hide();
                 $item.find(".btn-plus").hide();
                 $item.find(".delete").hide();
                 $item.find(".count-label").addClass("acquired-count");
                 $item.find(".controller-left").addClass("acquired-text-style");
-                $item.find(".acquired").text("Не куплено");
-                $item.find("acquired").attr("id", "unacquired");
+                $item.find(".acquired").hide();
+                $item.find(".unacquired").show();
                 $stat.find(".name").addClass("acquired-text-style");
                 $stat.find(".quantity").addClass("acquired-text-style");
                 $bought.append($stat);
-            }
-            /*else{
-                $item.find(".btn-minus").show();
-                $item.find(".btn-plus").show();
-                $item.find(".delete").show();
-                $item.find(".count-label").removeClass("acquired-count");
-                $item.find(".controller-left").removeClass("acquired-text-style");
-                $item.find(".acquired").text("Куплено");
-                $item.find("acquired").attr("id", "acquired");
-                $stat.find(".name").removeClass("acquired-text-style");
-                $stat.find(".quantity").removeClass("acquired-text-style");
-                $bought.append($stat);
-            }*/
+
+        });
+        $item.find(".unacquired").click(function () {
+            $item.find(".btn-minus").show();
+            $item.find(".btn-plus").show();
+            $item.find(".delete").show();
+            $item.find(".count-label").removeClass("acquired-count");
+            $item.find(".controller-left").removeClass("acquired-text-style");
+            $item.find(".unacquired").hide();
+            $item.find(".acquired").show();
+            $stat.find(".name").removeClass("acquired-text-style");
+            $stat.find(".quantity").removeClass("acquired-text-style");
+            $remains.append($stat);
         });
 
 
 
         $item.find(".delete").click(
             function () {
-                $item.slideUp();
-                $stat.hide();
+            $item.slideUp("normal",function () {
+                $(this).remove();
+            });
+            $stat.remove();
             });
 
         $stats.append($stat);
@@ -79,9 +80,9 @@ $(function () {
     }
     var $new_input = $("#newItem");
     $(".add-button").click(
-        function(){
+        function () {
             var new_name = $new_input.val();
-            if(new_name.trim()){
+            if (new_name.trim()) {
                 addItem(new_name);
                 $new_input.val("");
                 $new_input.focus();

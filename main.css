@@ -8,11 +8,26 @@ body {
 
 /* Page Layout */
 
-.container{
-    width: 70%;
-    background-color: #EEEEEE;
-    margin: 0 auto;
-    padding-top: 100px;
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1127px;
+        margin: 0 auto;
+        padding-top: 100px;
+    }
+}
+@media only screen and (max-width: 1199px) and (min-width: 992px){
+    .container {
+        width: 933px;
+        margin: 0 auto;
+        padding-top: 100px;
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 700px) {
+    .container {
+        width: 723px;
+        margin: 0 auto;
+        padding-top: 100px;
+    }
 }
 /* Shadow */
 
@@ -289,11 +304,11 @@ input[type="text"]:focus::-webkit-input-placeholder {
     float: left;
 }
 .controller-center{
-    width: 27%;
+    width: 33%;
     float: left;
 }
 .controller-right{
-    width: 34%;
+    width: 28%;
     float: left;
 }
 /* Badge */
@@ -315,16 +330,29 @@ input[type="text"]:focus::-webkit-input-placeholder {
     background-color: royalblue;
     bottom: 0;
 }
+@media print {
+    .badge-name {
+        display: none;
+    }
+    .badge {
+        border: 3px solid purple;
+        background-color: grey;
+        border-radius: 20px 20px 0 0;
+        color: black;
+        height: 70px;
+        bottom: 0px;
+    }
+}
 /*Tooltips*/
 .tooltip{
     position: relative;
     display: inline-block;
     border-bottom: none;
 }
-.tooltip .tooltiptext{
+.tooltip .tooltip-data{
     visibility: hidden;
     width: 120px;
-    background-color: black;
+    background-color: purple;
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -336,9 +364,9 @@ input[type="text"]:focus::-webkit-input-placeholder {
     left: 50%;
     margin-left: -60px;
     opacity: 0;
-    transition: opacity 1s;
+    transition:1s all ease;
 }
-.tooltip .tooltiptext::after{
+.tooltip .tooltip-data::after{
     content: " ";
     position: absolute;
     top: 100%;
@@ -346,15 +374,18 @@ input[type="text"]:focus::-webkit-input-placeholder {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: black transparent transparent transparent;
+    border-color: purple transparent transparent transparent;
 }
-.tooltip:hover .tooltiptext{
+.tooltip:hover .tooltip-data{
     visibility: visible;
-    opacity: 0.5;
+    opacity: 1;
 }
-@media (max-width: 950px) {
+
+
+@media (max-width: 700px) {
     .container{
         margin: 0;
+        padding-top: 100px;
         width: 100%;
     }
     .main-and-sidebar{

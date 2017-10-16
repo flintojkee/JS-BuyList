@@ -63,8 +63,12 @@ $(function () {
             $remains.append($stat);
         });
 
-
-
+        $item.find(".controller-left").focusout(function(){
+            var name = $item.find(".controller-left").text();
+            name.trim();
+            $item.find(".controller-left").text(name);
+            $stat.find(".name").text(name);
+        });
         $item.find(".delete").click(
             function () {
             $item.slideUp("normal",function () {

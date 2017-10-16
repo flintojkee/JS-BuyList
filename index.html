@@ -15,7 +15,7 @@
                 <input id = "newItem" class="prod-title" type="text" placeholder="Назва товару">
                 <div class="tooltip">
                     <button class="add-button" >Додати</button>
-                    <span class="tooltiptext">Додати товар</span>
+                    <span class="tooltip-data">Додати товар</span>
                 </div>
             </div>
             <div class = "product-list"></div>
@@ -29,45 +29,33 @@
     </div>
 </div>
 <div class="badge">
-    <p>BuyList</p>
+    <p class="badge-name">BuyList</p>
     <p>Created by Denys Vasylenko</p>
 </div>
 <div class="one-item-template">
     <div class="item" >
-        <div class="controller-left">
-            <div class="tooltip">
+        <div class="controller-left" id="name" contenteditable="">
                 Печиво
-                <span class="tooltiptext">Назва продукту</span>
-            </div>
         </div>
         <div class="controller-center">
             <div class="tooltip">
                 <button class="btn-minus circle-btn inactive btn-sign">-</button>
-                <span class="tooltiptext">Зменшити кількість товарів</span>
+                <span class="tooltip-data">Зменшити кількість товарів</span>
             </div>
             <div class="tooltip">
                 <span class="count-label">1</span>
-                <span class="tooltiptext">Кількість товарів</span>
+                <span class="tooltip-data">Кількість товарів</span>
             </div>
-            <div class="tooltip">
+            <div class="tooltip" >
                 <button class="btn-plus circle-btn  btn-sign">+</button>
-                <span class="tooltiptext">Збільшити кількість товарів</span>
+                <span class="tooltip-data">Збільшити кількість товарів</span>
             </div>
         </div>
         <div class="controller-right">
+            <button type="button" class="delete btn-sign">x</button>
+            <button type="button" class="acquired btn-sign">Куплено</button>
+            <button type="button" class="unacquired btn-sign" style="display:none;">Не куплено</button>
 
-            <div class="tooltip">
-                <button type="button" class="acquired btn-sign">Куплено</button>
-                <span class="tooltiptext">Купити товари</span>
-            </div>
-            <div class="tooltip">
-                <span class="tooltiptext">Повернути товар</span>
-                <button type="button" class="unacquired btn-sign" style="display:none;">Не куплено</button>
-            </div>
-            <div class="tooltip">
-                <button type="button" class="delete btn-sign">x</button>
-                <span class="tooltiptext">Видалити товар</span>
-            </div>
         </div>
     </div>
 </div>

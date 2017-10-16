@@ -1,5 +1,6 @@
 $(function () {
     var $list = $(".product-list");
+    var $prod_title = $(".prod-title");
     var $stats = $(".remains-products");
     var $bought =$(".bought-products");
     var $remains = $(".remains-products");
@@ -82,7 +83,12 @@ $(function () {
         $list.append($item);
         $item.slideDown();
     }
+    addItem("Помідори");
+    addItem("Печиво");
+    addItem("Сир");
+
     var $new_input = $("#newItem");
+
     $(".add-button").click(
         function () {
             var new_name = $new_input.val();
@@ -93,7 +99,15 @@ $(function () {
             }
         }
     );
-    addItem("Помідори");
-    addItem("Печиво");
-    addItem("Сир");
+
+    $prod_title.keyup(function (e) {
+        if (e.which == 13) {
+            var new_name = $new_input.val();
+            if (new_name.trim()) {
+                addItem(new_name);
+                $new_input.val("");
+                $new_input.focus();
+                }
+            }
+    });
 });
